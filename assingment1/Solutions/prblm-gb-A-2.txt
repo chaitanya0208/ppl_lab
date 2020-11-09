@@ -1,0 +1,13 @@
+1.How have if-blocks been translated into GIMPLE  statements? Can you differentiate between conditional and unconditional gotos?
+ANS:
+	The if statement in gimple have blocks means when the condition in if statement is true then it goes to a block specified with notation of type <D.1917> and then the further statements are carried out.
+	Conditional gotos have to be used by specifying certain condition in parenthesis. Whereas in case of unconditional gotos there is no need to specify any condition it gets executed when condition is false.
+	 
+--------------------------------------------------------	
+2. Repeat the above compilation,but now asking for another dump that of the pass  "cfg". View this pass and say whether this
+representation makes it easier to read and understand GIMPLEs. Draw the control-flow graph of the program A-2.c on a  piece of paper by looking at the CFG dump.
+
+ANS:
+	The cfg dump is written in more proper way. The if else statements are written more proper way than in gimple dump.
+	
+	   

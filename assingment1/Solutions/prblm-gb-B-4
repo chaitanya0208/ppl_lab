@@ -1,0 +1,13 @@
+1. How many  times is the expression  (a + c) computed  in the original code (as seen in the SSA pass)? What about after the FRE pass?
+	
+	The expression (a+c) is caculated only once and then stored in temporary variable . And then again used for further calculations.
+	After FRE pass it remains same but the variable name changes. 
+	 
+2. Have  there been  any more  optimizations  after FRE?  How will  you check?	 
+	No there are no optimizations afer FRE.It can be checked by using vi -O B-4.c.*.ssa B-4.c.*.fre1 . Just instead of ssa the file name would vary.
+	
+3. Why did  we have  to put a  "return b" in  this assignment?  What if "return b" is changed to "return 0"? Will it make any difference?	
+
+	As we have used int main() function in the start so its return type is integer so we have to return certain value .
+	Even if we type return 0 it will make no difference.
+	

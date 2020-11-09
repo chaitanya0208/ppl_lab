@@ -1,0 +1,12 @@
+1.  How is array declaration and initialization handled?
+
+	In case of array declaration even if you donot pecify size if array it calculates from the no of elements entered and the array which is declared first appears later(same which was for variables).
+	For Initialization is of array it uses indexing starting with zeroth index assigned the first value.
+	
+2.  Why does the statement a[i] = b[i] get broken down to two steps with an intermediate temporary?	 
+
+	a[i] and b[i] for any value of i has different memory location so it is used by storing its value in temporary variable.
+	
+3.  Why are there CLOBBER statements at the end?
+
+	Because a and b are comma separated lists.	 	 

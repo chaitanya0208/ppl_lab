@@ -1,0 +1,6 @@
+1. What will happen if "a = a + N" is replaced by "a = a + 1"?
+
+	When we print the value of a for first case it comes out to be 10 at the end of the loop as N has not been initialized so it is 0. But when we use N=1 then value of a comes out to be 14.
+	 
+
+	

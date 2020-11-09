@@ -1,0 +1,12 @@
+1.Identify the basic blocks that correspond  to the while loop. How is the GIMPLE for a while loop different from simple if-else jumps?
+
+	The blocks for while statement is <bb 4> .In gimple instead of using while statement it makes use of if else . But this if else statement have certain blocks to which it goes on repeating. Here when it first goes to <bb 4> the condition in if block is true so it says goto <bb 3> after execution of this <bb 3> the consecutive block is <bb 4>. So in this way it goes on iterating. In simple if else the goto block takes to block present  after ef else part and not before it so in this way it does not iterate.
+	
+2.Identify the  basic blocks  for the nested  for-loop. You  should be able  to identify  intializers, conditions  and increments  for each loop as  well as  the shared  inner body.  Is there  really anything special about a for-loop as compared to a while-loop?	
+ANS
+	The increments are taking palce in block <bb 9>(for i) <bb 7>(for j) . Initalization is in <bb 5> <bb 6> . Condition is checked in for i (bb 10) and for j <bb 8>.
+	All the statements that are to be executed inside loop are written in upper blocks.
+	
+	
+	
+	

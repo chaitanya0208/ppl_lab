@@ -1,0 +1,39 @@
+1.   How  do the  declarations  look in  the  GIMPLE? Specifically,  what
+            happens to multiple  variables declared and initialized  on the same
+            line? What happens to global declaration [int Z]?
+ANS:	
+	The variable that is declared at last appears first in gimple.Here, double r was declared lastly but it appears first in gimple.  	
+	Similarly, for the variables that are declared on the same line, the one that is declared last appears first in gimple. 
+	The global variable that was declared was initialized with 0 and is used in the program further. 	
+----------------------------------------------------------------------------------------	
+2.   How are complex  expressions such as [c  = a * b +  25] broken down?
+            Can you  determine a  rule as  to when  temporary variables  will be
+            introduced?	
+ANS:
+	According to precedence rule * has higher precedence than + so it will be evaluated first.So the value of the expression (a*b)is stored in a dummy variable(_1) and further it is used.
+	A general rule that can be stated will be whenever there are more complex operations to be performed than it makes use of this temporary variable.
+-------------------------------------------------------------------------------------	    	
+3.   How are  floats/doubles represented in  GIMPLE? What happens  when a float/double is assigned to an integer in [Z = r]?
+ANS:
+	Floats/Doubles are represented in terms of e representation.When a float is assigned to an integer like Z=r the integer part of the number is considered and the integer value is assigned to Z.
+	  
+---------------------------------------------------------------------------------------
+4   How  reads are/writes  to the  global variable  Z performed?  Why is
+            there a temporary introduced  for the statement [Z = Z  + 1] but not
+            for the statements [q = Z] or [Z = p]?	
+ANS:
+	In case of Z=Z+1 firstly the intergral value of r is taken and then added to 1 so for complex operations it makes use of temporary variables.But for the statement Z=p or q=Z the values are directly assigned so there is no need of temporary variable.
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	            

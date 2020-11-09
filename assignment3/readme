@@ -1,0 +1,1 @@
+gcc filename.c -fdump-tree-cfg-graph or gcc filename.c -fdump-tree-all-graph
